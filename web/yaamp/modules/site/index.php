@@ -20,7 +20,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <div id='resume_update_button' style='color: #444; background-color: #ffd; border: 1px solid #eea;
 	padding: 10px; margin-left: 20px; margin-right: 20px; margin-top: 15px; cursor: pointer; display: none;'
 	onclick='auto_page_resume();' align=center>
-	<b>Auto refresh is paused - Click to resume</b></div>
+	<b>Auto refresh is paused - Click to resume lazy person!</b></div>
 
 <table cellspacing=20 width=100%>
 <tr><td valign=top width=50%>
@@ -28,13 +28,13 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <!--  -->
 
 <div class="main-left-box">
-<div class="main-left-title">YII MINING POOLS</div>
+<div class="main-left-title">Coin Pool Services</div>
 <div class="main-left-inner">
 
 <ul>
 
-<li>YiiMP is a pool management solution based on the Yii Framework.</li>
-<li>This fork was based on the yaamp source code and is now an open source project.</li>
+<li>Coin Pool Services is a pool management solution based on the Yii Framework.</li>
+<li>This fork was based on the yaamp source code and is now managed by Coin Pool Service Dev Team.</li>
 <li>No registration is required, we do payouts in the currency you mine. Use your wallet address as the username.</li>
 <li>&nbsp;</li>
 <li>Payouts are made automatically every <?= $payout_freq ?> for all balances above <b><?= $min_payout ?></b>, or <b><?= $min_sunday ?></b> on Sunday.</li>
@@ -65,7 +65,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <?php else: ?>
 <li>&lt;WALLET_ADDRESS&gt; should be valid for the currency you mine. <b>DO NOT USE a BTC address here, the auto exchange is disabled</b>!</li>
 <?php endif; ?>
-<li>As optional password, you can use <b>-p c=&lt;SYMBOL&gt;</b> if yiimp does not set the currency correctly on the Wallet page.</li>
+<li>As optional password, you can use <b>-p c=&lt;SYMBOL&gt;</b> if the currency is not correct on the Wallet page.</li>
 <li>See the "Pool Status" area on the right for PORT numbers. Algorithms without associated coins are disabled.</li>
 
 <br>
@@ -101,7 +101,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 
 <!--  -->
 
-<a class="twitter-timeline" href="https://twitter.com/hashtag/YAAMP" data-widget-id="617405893039292417" data-chrome="transparent" height="450px" data-tweet-limit="3" data-aria-polite="polite">Tweets about #YAAMP</a>
+<a class="twitter-timeline" href="https://twitter.com/hashtag/crypto" data-widget-id="617405893039292417" data-chrome="transparent" height="450px" data-tweet-limit="3" data-aria-polite="polite">Tweets about #crypto</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 </td><td valign=top>

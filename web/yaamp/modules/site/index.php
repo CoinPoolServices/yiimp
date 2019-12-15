@@ -60,6 +60,35 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 	-o stratum+tcp://<?= YAAMP_STRATUM_URL ?>:&lt;PORT&gt; -u &lt;WALLET_ADDRESS&gt; [-p &lt;OPTIONS&gt;]</p>
 </li>
 
+
+
+<li>
+<table>
+<tbody><tr><td>
+<select id="drop-coin"><option selected="" hidden=""> -- Choose a coin -- 
+</option><option data-port="3633" data-portalgo="3633" data-algo="x13" data-symbol="PRIV">Privcy (PRIV)
+</option><option data-port="8533" data-portalgo="8533" data-algo="tribus" data-symbol="INN">Innova (INN)
+</option>
+</select></td><td>
+<input id="mine-pool" type="radio" name="typemine" value="Pool" checked=""> Pool
+</tr><tr><td>
+<input id="text-wallet" type="text" size="44" placeholder="Your Wallet Address">
+</td><td>
+<input id="text-rig-name" type="text" size="20" placeholder="Your Worker Name">
+</td></tr><tr>
+<td colspan="2">
+<input id="Generate!" type="button" value="Generate" onclick="javascript:generate();">
+</td></tr><tr>
+<td colspan="2">
+<p class="main-left-box" style="padding: 3px; background-color: #ffffee; font-family: monospace;" 
+id="output2">-a &lt;algo&gt; -o stratum+tcp://&lt;stratum&gt;:&lt;port&gt; -u &lt;wallet&gt; -p c=&lt;COIN&gt;
+</p></td></tr></tbody>
+</table>
+<br>
+</li>
+
+
+
 <?php if (YAAMP_ALLOW_EXCHANGE): ?>
 <li>&lt;WALLET_ADDRESS&gt; can be one of any currency we mine or a BTC address.</li>
 <?php else: ?>
@@ -101,7 +130,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 
 <!--  -->
 
-<a class="twitter-timeline" href="https://twitter.com/hashtag/crypto" data-widget-id="617405893039292417" data-chrome="transparent" height="450px" data-tweet-limit="3" data-aria-polite="polite">Tweets about #crypto</a>
+<a class="twitter-timeline" href="https://twitter.com/hashtag/cryptocurrencies" data-widget-id="617405893039292417" data-chrome="transparent" height="450px" data-tweet-limit="3" data-aria-polite="polite">Tweets about #crypto</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 </td><td valign=top>

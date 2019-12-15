@@ -56,13 +56,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <ul>
 
 <li>
-<p class="main-left-box" style='padding: 3px; font-size: .8em; background-color: #ffffee; font-family: monospace;'>
-	-o stratum+tcp://<?= YAAMP_STRATUM_URL ?>:&lt;PORT&gt; -u &lt;WALLET_ADDRESS&gt; [-p &lt;OPTIONS&gt;]</p>
-</li>
-
-
-
-<li>
+<a class="main-left-box" 
 <table>
 <tbody><tr><td>
 <select id="drop-coin"><option selected="" hidden=""> -- Choose a coin -- 
@@ -85,7 +79,9 @@ id="output2">-a &lt;algo&gt; -o stratum+tcp://&lt;stratum&gt;:&lt;port&gt; -u &l
 </p></td></tr></tbody>
 </table>
 <br>
+	</a>
 </li>
+
 
 
 

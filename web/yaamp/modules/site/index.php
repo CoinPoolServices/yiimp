@@ -16,8 +16,45 @@
 <meta name="keywords" content="anonymous,mining,pool,maxcoin,bitcoin,altcoin,auto,switch,exchange,profit,decred,scrypt,x11,x13,x14,x15,lbry,lyra2re,neoscrypt,sha256,quark,skein2">
 <script type="text/javascript" src="/assets/93f3a5b5/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/93f3a5b5/jui/js/jquery-ui.min.js"></script>
-<title>Popof - speedpool.top - Site</title><link rel="stylesheet" type="text/css" href="/extensions/jquery/themes/ui-lightness/jquery-ui.css" /><link rel="stylesheet" type="text/css" href="/yaamp/ui/css/main.css" /><link rel="stylesheet" type="text/css" href="/yaamp/ui/css/table.css" /><script type="text/javascript" src="/yaamp/ui/js/jquery.tablesorter.js"></script></head><body class="page"><a href="/site/mainbtc" style="display: none;">main</a><div class="tabmenu-out"><div class="tabmenu-inner">&nbsp;&nbsp;<a href="/">Popof</a><span><a class='selected' href='/'>Home</a></span>&nbsp;<span><a  href='/site/mining'>Pool</a></span>&nbsp;<span><a  href='/?address='>Wallet</a></span>&nbsp;<span><a  href='/stats'>Graphs</a></span>&nbsp;<span><a  href='/site/miners'>Miners</a></span>&nbsp;<span><a  href='/explorer'>Explorers</a></span>&nbsp;<span><a  href='/cours'>Cours</a></span>&nbsp;<span style="float: right;"><span id="nextpayout" style="font-size: .8em;" title="in 20 minutes">Next Payout: 23:35 UTC</span></div></div><div class='content-out'><div style='width: 100%; height:40px;'><iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1506&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'></iframe></div><div class='content-inner'><script type="text/javascript" src="/extensions/jqplot/jquery.jqplot.js"></script><script type="text/javascript" src="/extensions/jqplot/plugins/jqplot.dateAxisRenderer.js"></script><script type="text/javascript" src="/extensions/jqplot/plugins/jqplot.barRenderer.js"></script><script type="text/javascript" src="/extensions/jqplot/plugins/jqplot.highlighter.js"></script><script type="text/javascript" src="/extensions/jqplot/plugins/jqplot.cursor.js"></script><script type="text/javascript" src="/yaamp/ui/js/auto_refresh.js"></script>
+
+<title>Coin Pool Services - coinpoolservices.com - Site</title>
+<link rel="stylesheet" type="text/css" href="/extensions/jquery/themes/ui-lightness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="/yaamp/ui/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/yaamp/ui/css/table.css" />
+<script type="text/javascript" src="/yaamp/ui/js/jquery.tablesorter.js"></script>
+
+</head>
+<body class="page"><a href="/site/mainbtc" style="display: none;">main</a>
+<div class="tabmenu-out">
+<div class="tabmenu-inner">&nbsp;&nbsp;<a href="/">CoinPS</a><span>
+<a class='selected' href='/'>Home</a></span>&nbsp;<span>
+<a  href='/site/mining'>Pool</a></span>&nbsp;<span>
+<a  href='/?address='>Wallet</a></span>&nbsp;<span>
+<a  href='/stats'>Graphs</a></span>&nbsp;<span>
+<a  href='/site/miners'>Miners</a></span>&nbsp;<span>
+<a  href='/explorer'>Explorers</a></span>&nbsp;<span>
+<a  href='/bench'>Benches</a></span>&nbsp;<span>
+<a  href='/renting'>Rentals</a></span>&nbsp;<span>
+<a  href='/coin'>Coins</a></span>&nbsp;<span>
+<a  href='/site/common'>Dashboards</a></span>&nbsp;<span>
+<a  href='/site/admin'>Wallets</a></span>&nbsp;<span>
+<a  href='/site/renting'>Jobs</a></span>&nbsp;<span>
+<a  href='/renting'>Rentals</a></span>&nbsp;<span>
+<span style="float: right;"><span id="nextpayout" style="font-size: .8em;" title="in 20 minutes">Next Payout: 23:35 UTC</span>
+</div></div>
+
+<div class='content-out'>
+<div style='width: 100%; height:40px;'>
+<iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1506&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'>
+</iframe></div><div class='content-inner'>
+<script type="text/javascript" src="/extensions/jqplot/jquery.jqplot.js"></script>
+<script type="text/javascript" src="/extensions/jqplot/plugins/jqplot.dateAxisRenderer.js"></script>
+<script type="text/javascript" src="/extensions/jqplot/plugins/jqplot.barRenderer.js"></script>
+<script type="text/javascript" src="/extensions/jqplot/plugins/jqplot.highlighter.js"></script>
+<script type="text/javascript" src="/extensions/jqplot/plugins/jqplot.cursor.js"></script>
+<script type="text/javascript" src="/yaamp/ui/js/auto_refresh.js"></script>
 <script>
+
 function getLastUpdated2(){
         var mine = '';
         var drop2 = document.getElementById('drop-coin');

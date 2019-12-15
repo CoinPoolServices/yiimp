@@ -78,7 +78,6 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 id="output2">-a &lt;algo&gt; -o stratum+tcp://&lt;stratum&gt;:&lt;port&gt; -u &lt;wallet&gt; -p c=&lt;COIN&gt;
 </p></td></tr></tbody>
 </table>
-<br>
 	</a>
 </li>
 

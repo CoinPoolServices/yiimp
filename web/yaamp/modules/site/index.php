@@ -36,10 +36,6 @@
 <a  href='/bench'>Benches</a></span>&nbsp;<span>
 <a  href='/renting'>Rentals</a></span>&nbsp;<span>
 <a  href='/coin'>Coins</a></span>&nbsp;<span>
-<a  href='/site/common'>Dashboards</a></span>&nbsp;<span>
-<a  href='/site/admin'>Wallets</a></span>&nbsp;<span>
-<a  href='/site/renting'>Jobs</a></span>&nbsp;<span>
-<a  href='/renting'>Rentals</a></span>&nbsp;<span>
 <span style="float: right;"><span id="nextpayout" style="font-size: .8em;" title="in 20 minutes">Next Payout: 23:35 UTC</span>
 </div></div>
 

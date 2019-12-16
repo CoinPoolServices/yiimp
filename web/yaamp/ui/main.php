@@ -62,7 +62,6 @@ echo '<a href="/site/mainbtc" style="display: none;">main</a>';
 
 showPageHeader();
 showPageContent($content);
-showPageFooter();
 
 echo "</body></html>";
 return;
@@ -133,17 +132,6 @@ function showPageHeader()
 
 	echo "</div>";
 	echo "</div>";
-}
-
-function showPageFooter()
-{
-	echo '<div class="footer">';
-	$year = date("Y", time());
-
-	echo "<p>&copy; $year ".YAAMP_SITE_NAME.' - '.
-		'<a href="http://github.com/tpruvot/yiimp">Open source Project</a></p>';
-
-	echo '</div><!-- footer -->';
 }
 
 

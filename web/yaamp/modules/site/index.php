@@ -23,21 +23,7 @@
 <link rel="stylesheet" type="text/css" href="/yaamp/ui/css/table.css" />
 <script type="text/javascript" src="/yaamp/ui/js/jquery.tablesorter.js"></script>
 
-</head>
-<body class="page"><a href="/site/mainbtc" style="display: none;">main</a>
-<div class="tabmenu-out">
-<div class="tabmenu-inner">&nbsp;&nbsp;<a href="/">CoinPS</a><span>
-<a class='selected' href='/'>Home</a></span>&nbsp;<span>
-<a  href='/site/mining'>Pool</a></span>&nbsp;<span>
-<a  href='/?address='>Wallet</a></span>&nbsp;<span>
-<a  href='/stats'>Graphs</a></span>&nbsp;<span>
-<a  href='/site/miners'>Miners</a></span>&nbsp;<span>
-<a  href='/explorer'>Explorers</a></span>&nbsp;<span>
-<a  href='/bench'>Benches</a></span>&nbsp;<span>
-<a  href='/renting'>Rentals</a></span>&nbsp;<span>
-<a  href='/coin'>Coins</a></span>&nbsp;<span>
-<span style="float: right;"><span id="nextpayout" style="font-size: .8em;" title="in 20 minutes">Next Payout: 23:35 UTC</span>
-</div></div>
+
 
 <div class='content-out'>
 <div style='width: 100%; height:40px;'>

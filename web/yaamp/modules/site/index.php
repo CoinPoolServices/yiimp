@@ -17,7 +17,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 	onclick='auto_page_resume();' align=center>
 	<b>Auto refresh is paused - Click to resume lazy person!</b></div>
 
-<div><div class='content-out'><div style='width: 100%; height:40px;'><iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1506&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'></iframe>
+<div><div class='content-out'><div style='width: 100%; height:40px;'><iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'></iframe>
 
 
 <table cellspacing=20 width=100%>

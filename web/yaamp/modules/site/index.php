@@ -56,23 +56,39 @@ GENERAL INFO SECTION
 STRATUM SETUP SECTION 
 -->
 
-<div class="main-left-box">
-<div class="main-left-title">STRATUM SERVERS</div>
-<div class="main-left-inner">
+<table>
+<thead>
+<tr>
+<th>Stratum</th>
+<th>Coin</th>
+<th>Wallet Address</th>
+<th>RigName</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>
+<select id="drop-coin">
+<!-- <option data-port='5053' data-algo='-a x16r' data-symbol='RVN'>RavenCoin (RVN)</option> -->
+<option data-port='8533' data-algo='-a tribus' data-symbol='INN'>Innova (INN)</option>
+<option data-port='3633' data-algo='-a x13' data-symbol='PRIV'>PRiVCY (PRIV)</option>
+</select>
+</td>
+<td>
+<input id="text-wallet" type="text" size="44" placeholder="RVeukWdnWhDuQ4VmLAESYXrGxuunZo7pfd">
+</td><td>
+<input id="text-rig-name" type="text" size="10" placeholder="8GPUCards">
+</td>
+<td>
+<input id="Generate!" type="button" value="Start Mining" onclick="generate()">
+</td>
+</tr>
+<tr><td colspan="5"><p class="main-left-box" style="padding: 3px; background-color: #ffffee; font-family: monospace;" id="output">-a x16r -o stratum+tcp://mining.stakecube.net:4533 -u . -p c=RVN</p>
+</td>
+</tr>
+</tbody></table>
 
-<ul>
-
-<li>
-<p class="main-left-box" style='padding: 3px; font-size: .8em; background-color: #ffffee; font-family: monospace;'>
-	-o stratum+tcp://<?= YAAMP_STRATUM_URL ?>:&lt;PORT&gt; -u &lt;WALLET_ADDRESS&gt; [-p &lt;OPTIONS&gt;]</p>
-</li>
-
-<?php if (YAAMP_ALLOW_EXCHANGE): ?>
-<li>&lt;WALLET_ADDRESS&gt; can be one of any currency we mine or a BTC address.</li>
-<?php else: ?>
 <li>&lt;WALLET_ADDRESS&gt; should be valid for the currency you mine. <b>DO NOT USE a BTC address here, the auto exchange is disabled</b>!</li>
-<?php endif; ?>
-<li>As optional password, you can use <b>-p c=&lt;SYMBOL&gt;</b> if the currency is not correct on the Wallet page.</li>
+<li>As optional password, you can use <b>-p c=&lt;SYMBOL&gt;</b> if yiimp does not set the currency correctly on the Wallet page.</li>
 <li>See the "Pool Status" area on the right for PORT numbers. Algorithms without associated coins are disabled.</li>
 
 <br>

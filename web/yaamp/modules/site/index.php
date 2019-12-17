@@ -114,6 +114,17 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <br><br><br><br><br><br><br><br><br><br>
 </div>
 
+<div class="main-left-title-p">Donations</div>
+<div class="main-left-inner">
+<center>
+<img width='150' src='/images/btc_Wallet.png'>
+<img width='150' src='/images/ltc_Wallet.png'>
+</center>
+<br>
+<li> BTC 	: <a href="https://www.blockchain.com/btc/address/1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7">1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7</a></li>
+<li> LTC	: <a href="https://live.blockcypher.com/ltc/address/M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk/">M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk</a></li>
+</div>
+
 </td></tr></table>
 
 <br><br><br><br><br><br><br><br><br><br>

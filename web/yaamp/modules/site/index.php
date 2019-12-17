@@ -23,7 +23,7 @@ SCROLLING PRICE BAR
 -->
 
 <div><div class='header'><div style='width: 100%; height:40px;'><iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'></iframe>
-
+<div><div class="footer"><p>&copy; 2019 Coin Pool Services - All Rights Reserved</p></div><!-- footer --></body></html>
 
 <table cellspacing=20 width=100%>
 <tr><td valign=top width=50%>
@@ -218,5 +218,3 @@ function pool_history_refresh()
 	$.get(url, '', pool_history_ready);
 }
 </script>
-
-</div></div><div class="footer"><p>&copy; 2019 Coin Pool Services - All Rights Reserved</p></div><!-- footer --></body></html>

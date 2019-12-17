@@ -117,8 +117,8 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <div class="main-left-title-p">Donations</div>
 <div class="main-left-inner">
 <center>
-<img width='150' src='/images/btc_Wallet.png'>
-<img width='150' src='/images/ltc_Wallet.png'>
+<img width='150' src='/images/btc_wallet.png'>
+<img width='150' src='/images/ltc_wallet.png'>
 </center>
 <br>
 <li> BTC 	: <a href="https://www.blockchain.com/btc/address/1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7">1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7</a></li>

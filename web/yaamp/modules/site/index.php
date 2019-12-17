@@ -104,7 +104,7 @@ URL LINK SECTION
 <li><b>Algo Switching</b> - <a href='/site/multialgo'>http://coinpoolservices.com/site/multialgo</a></li>
 <?php endif; ?>
 
-<li><b>Discord</b> - <a href='/site/diff'>https://discord.gg/G7Snbxk</a></li>
+<li><a href="https://discord.gg/G7Snbxk" target="_blank"><img width='300' src='/images/discord.png'></a></li>
 <br>
 
 </ul>

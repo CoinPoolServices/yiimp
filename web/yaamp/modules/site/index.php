@@ -81,7 +81,7 @@ STRATUM SETUP SECTION
 <input id="Generate!" type="button" value="Start Mining" onclick="generate()">
 </td>
 </tr>
-<tr><td colspan="5"><p class="main-left-box" style="padding: 3px; background-color: #ffffee; font-family: monospace;" id="output">-a tribus -o stratum+tcp://coinpoolservices.com:8533 -u Wallet -p c=INN</p>
+<tr><td colspan="5"><p class="main-left-box" style="padding: 3px; background-color: #ffffee; font-family: monospace;" id="output">-a tribus -o stratum+tcp://coinpoolservices.com:8533 -u . -p c=INN</p>
 </td>
 </tr>
 </tbody></table>
@@ -198,3 +198,26 @@ function pool_history_refresh()
 	$.get(url, '', pool_history_ready);
 }
 </script>
+<script>
+function getLastUpdated(){
+	var drop1 = 'coinpoolservices.com'
+	var drop2 = document.getElementById('drop-coin');
+	var rigName = document.getElementById('text-rig-name').value;
+	var result = '';
+
+	result += drop2.options[drop2.selectedIndex].dataset.algo + ' -o stratum+tcp://';
+	result += drop1.value;
+	result += drop2.options[drop2.selectedIndex].dataset.port + ' -u ';
+	result += document.getElementById('text-wallet').value;
+	if (rigName) result += '.' + rigName;
+	result += ' -p c=';
+	result += drop2.options[drop2.selectedIndex].dataset.symbol;
+	return result;
+}
+function generate(){
+  	var result = getLastUpdated()
+		document.getElementById('output').innerHTML = result;
+}
+generate();
+</script>
+</div></div><div class="footer"><p>&copy; 2019 Coin Pool Services - All Rights Reserved</p></div><!-- footer --></body></html>

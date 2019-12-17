@@ -20,7 +20,7 @@ echo <<<END
 
 END;
 
-$pageTitle = empty($this->pageTitle) ? CoinPS : CoinPS." - ".$this->pageTitle;
+$pageTitle = empty($this->pageTitle) ? YAAMP_SITE_NAME : YAAMP_SITE_NAME." - ".$this->pageTitle;
 
 echo '<title>'.$pageTitle.'</title>';
 

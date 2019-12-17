@@ -67,7 +67,6 @@ STRATUM SETUP SECTION
 <tbody><tr>
 <td>
 <select id="drop-coin">
-<!-- <option data-port='5053' data-algo='-a x16r' data-symbol='RVN'>RavenCoin (RVN)</option> -->
 <option data-port='8533' data-algo='-a tribus' data-symbol='INN'>Innova (INN)</option>
 <option data-port='3633' data-algo='-a x13' data-symbol='PRIV'>PRiVCY (PRIV)</option>
 </select>
@@ -91,6 +90,27 @@ STRATUM SETUP SECTION
 <li>See the "Pool Status" area on the right for PORT numbers. Algorithms without associated coins are disabled.</li>
 
 <br>
+
+<script>
+function getLastUpdated(){
+	var dropCoin = document.getElementById('drop-coin');
+	var rigName = document.getElementById('text-rig-name').value;
+	var result = '';
+
+	result += dropCoin.options[dropCoin.selectedIndex].dataset.algo + ' -o stratum+tcp://coinpoolservices.com';
+	result += dropCoin.options[dropCoin.selectedIndex].dataset.port + ' -u ';
+	result += document.getElementById('text-wallet').value;
+	if (rigName) result += '.' + rigName;
+	result += ' -p c=';
+	result += dropCoin.options[dropCoin.selectedIndex].dataset.symbol;
+	return result;
+}
+function generate(){
+  	var result = getLastUpdated()
+		document.getElementById('output').innerHTML = result;
+}
+generate();
+</script>
 
 </ul>
 </div></div><br>
@@ -198,26 +218,5 @@ function pool_history_refresh()
 	$.get(url, '', pool_history_ready);
 }
 </script>
-<script>
-function getLastUpdated(){
-	var drop1 = 'coinpoolservices.com'
-	var drop2 = document.getElementById('drop-coin');
-	var rigName = document.getElementById('text-rig-name').value;
-	var result = '';
 
-	result += drop2.options[drop2.selectedIndex].dataset.algo + ' -o stratum+tcp://';
-	result += drop1.value;
-	result += drop2.options[drop2.selectedIndex].dataset.port + ' -u ';
-	result += document.getElementById('text-wallet').value;
-	if (rigName) result += '.' + rigName;
-	result += ' -p c=';
-	result += drop2.options[drop2.selectedIndex].dataset.symbol;
-	return result;
-}
-function generate(){
-  	var result = getLastUpdated()
-		document.getElementById('output').innerHTML = result;
-}
-generate();
-</script>
 </div></div><div class="footer"><p>&copy; 2019 Coin Pool Services - All Rights Reserved</p></div><!-- footer --></body></html>

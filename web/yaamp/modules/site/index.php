@@ -59,7 +59,6 @@ STRATUM SETUP SECTION
 <table>
 <thead>
 <tr>
-<th>Stratum</th>
 <th>Coin</th>
 <th>Wallet Address</th>
 <th>RigName</th>
@@ -82,7 +81,7 @@ STRATUM SETUP SECTION
 <input id="Generate!" type="button" value="Start Mining" onclick="generate()">
 </td>
 </tr>
-<tr><td colspan="5"><p class="main-left-box" style="padding: 3px; background-color: #ffffee; font-family: monospace;" id="output">-a x16r -o stratum+tcp://mining.stakecube.net:4533 -u . -p c=RVN</p>
+<tr><td colspan="5"><p class="main-left-box" style="padding: 3px; background-color: #ffffee; font-family: monospace;" id="output">-a tribus -o stratum+tcp://coinpoolservices.com:8533 -u Wallet -p c=INN</p>
 </td>
 </tr>
 </tbody></table>

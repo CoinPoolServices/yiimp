@@ -93,26 +93,27 @@ URL LINK SECTION
 <!--<li><b>BitcoinTalk</b> - <a href='https://bitcointalk.org/index.php?topic=508786.0' target=_blank >https://bitcointalk.org/index.php?topic=508786.0</a></li>-->
 <!--<li><b>IRC</b> - <a href='http://webchat.freenode.net/?channels=#yiimp' target=_blank >http://webchat.freenode.net/?channels=#yiimp</a></li>-->
 
-<li><b>API</b> - <a href='/site/api'>http://<?= YAAMP_SITE_URL ?>/site/api</a></li>
-<li><b>Difficulty</b> - <a href='/site/diff'>http://<?= YAAMP_SITE_URL ?>/site/diff</a></li>
+<li><b>API</b> - <a href='/site/api'>http://coinpoolservices.com/site/api</a></li>
+<li><b>Difficulty</b> - <a href='/site/diff'>http://coinpoolservices.com/site/diff</a></li>
+
 <?php if (YIIMP_PUBLIC_BENCHMARK): ?>
-<li><b>Benchmarks</b> - <a href='/site/benchmarks'>http://<?= YAAMP_SITE_URL ?>/site/benchmarks</a></li>
+<li><b>Benchmarks</b> - <a href='/site/benchmarks'>http://coinpoolservices.com/site/benchmarks</a></li>
 <?php endif; ?>
 
 <?php if (YAAMP_ALLOW_EXCHANGE): ?>
-<li><b>Algo Switching</b> - <a href='/site/multialgo'>http://<?= YAAMP_SITE_URL ?>/site/multialgo</a></li>
+<li><b>Algo Switching</b> - <a href='/site/multialgo'>http://coinpoolservices.com/site/multialgo</a></li>
 <?php endif; ?>
 
+<li><b>Discord</b> - <a href='/site/diff'>https://discord.gg/G7Snbxk</a></li>
 <br>
 
 </ul>
 </div></div><br>
 
-<!--  -->
-
+<!--  
 <a class="twitter-timeline" href="https://twitter.com/hashtag/crypto" data-widget-id="617405893039292417" data-chrome="transparent" height="450px" data-tweet-limit="3" data-aria-polite="polite">Tweets about #crypto</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
+-->
 </td><td valign=top>
 
 <!--  -->
@@ -132,9 +133,9 @@ DONATION SECTION
 <div class="main-left-title-p">Donations</div>
 <div class="main-left-inner">
 <center>
-<img width='150' src='/images/btc_wallet.png'>
-<img width='150' src='/images/ltc_wallet.png'>
-<img width='150' src='/images/inn_wallet.png'>
+<img width='150' src='/images/btc_wallet.png'><p>   </p>
+<img width='150' src='/images/ltc_wallet.png'><p>   </p>
+<img width='150' src='/images/inn_wallet.png'><p>   </p>
 </center>
 <br>
 <li> BTC 	: <a href="https://www.blockchain.com/btc/address/1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7">1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7</a>&nbsp;</li><p>   </p>

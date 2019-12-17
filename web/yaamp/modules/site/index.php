@@ -17,13 +17,20 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 	onclick='auto_page_resume();' align=center>
 	<b>Auto refresh is paused - Click to resume lazy person!</b></div>
 
+
+<!--
+SCROLLING PRICE BAR 
+-->
+
 <div><div class='content-out'><div style='width: 100%; height:40px;'><iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'></iframe>
 
 
 <table cellspacing=20 width=100%>
 <tr><td valign=top width=50%>
 
-<!--  -->
+<!--
+GENERAL INFO SECTION 
+-->
 
 <div class="main-left-box">
 <div class="main-left-title">Coin Pool Services</div>
@@ -45,7 +52,9 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 </div></div>
 <br/>
 
-<!--  -->
+<!--
+STRATUM SETUP SECTION 
+-->
 
 <div class="main-left-box">
 <div class="main-left-title">STRATUM SERVERS</div>
@@ -71,7 +80,9 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 </ul>
 </div></div><br>
 
-<!--  -->
+<!--
+URL LINK SECTION 
+-->
 
 <div class="main-left-box">
 <div class="main-left-title">LINKS</div>
@@ -114,15 +125,21 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <br><br><br><br><br><br><br><br><br><br>
 </div>
 
+
+<!--
+DONATION SECTION 
+-->
 <div class="main-left-title-p">Donations</div>
 <div class="main-left-inner">
 <center>
 <img width='150' src='/images/btc_wallet.png'>
 <img width='150' src='/images/ltc_wallet.png'>
+<img width='150' src='/images/inn_wallet.png'>
 </center>
 <br>
-<li> BTC 	: <a href="https://www.blockchain.com/btc/address/1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7">1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7</a></li>
-<li> LTC	: <a href="https://live.blockcypher.com/ltc/address/M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk/">M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk</a></li>
+<li> BTC 	: <a href="https://www.blockchain.com/btc/address/1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7">1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7</a>&nbsp;</li>
+<li> LTC	: <a href="https://live.blockcypher.com/ltc/address/M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk/">M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk</a>&nbsp;</li>
+<li> INN	: <a href="https://explorer.innovacoin.io/address/iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw">iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw</a>&nbsp;</li>
 </div>
 
 </td></tr></table>

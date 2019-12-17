@@ -137,9 +137,9 @@ DONATION SECTION
 <img width='150' src='/images/inn_wallet.png'>
 </center>
 <br>
-<li> BTC 	: <a href="https://www.blockchain.com/btc/address/1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7">1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7</a>&nbsp;</li>
-<li> LTC	: <a href="https://live.blockcypher.com/ltc/address/M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk/">M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk</a>&nbsp;</li>
-<li> INN	: <a href="https://explorer.innovacoin.io/address/iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw">iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw</a>&nbsp;</li>
+<li> BTC 	: <a href="https://www.blockchain.com/btc/address/1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7">1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7</a>&nbsp;</li><p>   </p>
+<li> LTC	: <a href="https://live.blockcypher.com/ltc/address/M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk/">M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk</a>&nbsp;</li><p>   </p>
+<li> INN	: <a href="https://explorer.innovacoin.io/address/iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw">iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw</a>&nbsp;</li><p>   </p>
 </div>
 
 </td></tr></table>

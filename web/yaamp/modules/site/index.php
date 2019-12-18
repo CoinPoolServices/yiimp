@@ -97,7 +97,7 @@ function getLastUpdated(){
 	var rigName = document.getElementById('text-rig-name').value;
 	var result = '';
 
-	result += dropCoin.options[dropCoin.selectedIndex].dataset.algo + ' -o stratum+tcp://coinpoolservices.com:';
+	result += dropCoin.options[dropCoin.selectedIndex].dataset.algo + ' -o stratum+tcp://' + 'coinpoolservices.com:';
 	result += dropCoin.options[dropCoin.selectedIndex].dataset.port + ' -u ';
 	result += document.getElementById('text-wallet').value;
 	if (rigName) result += '.' + rigName;

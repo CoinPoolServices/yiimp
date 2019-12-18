@@ -166,7 +166,7 @@ URL LINK SECTION
 DONATION SECTION 
 -->
 <div class="main-left-box">
-<div class="main-left-title-p">Donations</div>
+<div class="main-left-title">DONATIONS</div>
 <div class="main-left-inner">
 <left>
 <img width='150' src='/images/btc_wallet.png'>

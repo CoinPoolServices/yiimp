@@ -35,8 +35,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 SCROLLING PRICE BAR 
 -->
 
-<div><div class='header'><div style='width: 100%; height:40px;'><iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'></iframe>
-<div><div class="footer"><p>&copy; 2019 Coin Pool Services - All Rights Reserved</p></div><!-- footer --></body></html>
+<div class='header'><div style='width: 100%; height:40px;'><iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'></iframe></div>
 
 <table cellspacing=20 width=100%>
 <tr><td valign=top width=50%>
@@ -44,25 +43,19 @@ SCROLLING PRICE BAR
 <!--
 GENERAL INFO SECTION 
 -->
-
 <div class="main-left-box">
-<div class="main-left-title">Coin Pool Services</div>
-<div class="main-left-inner">
+	<div class="main-left-title">Coin Pool Services</div>
+		<div class="main-left-inner">
+			<p style="text-align: justify;">Coin Pool Services is a pool management solution based on the Yii Framework.</p>
+			<p style="text-align: justify;">This fork was based on the yaamp source code and is now managed by Coin Pool Service Dev Team.</p>
+			<p style="text-align: justify;">No registration is required, we do payouts in the currency you mine. Use your wallet address as the username.</p>
+			<p style="text-align: justify;">Payouts are made automatically every 2 hours for all balances above <strong>0.001</strong>, or <strong>0.0001</strong> on Sunday.</p>
+			<p style="text-align: justify;">For some coins, there is an initial delay before the first payout, please wait at least 6 hours before asking for support.</p>
+			<p style="text-align: justify;">Blocks are distributed proportionally among valid submitted shares.</p>
+		</div>
+	</div>
+</div>
 
-<ul>
-
-<li>Coin Pool Services is a pool management solution based on the Yii Framework.</li>
-<li>This fork was based on the yaamp source code and is now managed by Coin Pool Service Dev Team.</li>
-<li>No registration is required, we do payouts in the currency you mine. Use your wallet address as the username.</li>
-<li>&nbsp;</li>
-<li>Payouts are made automatically every <?= $payout_freq ?> for all balances above <strong><?= $min_payout ?></strong>, or <strong><?= $min_sunday ?></strong> on Sunday.</li>
-<li>For some coins, there is an initial delay before the first payout, please wait at least 6 hours before asking for support.</li>
-<li>Blocks are distributed proportionally among valid submitted shares.</li>
-
-<br/>
-
-</ul>
-</div></div>
 <br/>
 
 <!--
@@ -138,9 +131,9 @@ generate();
 <div class="main-left-inner">
 
 <li><strong>Current Listings<strong></li>
-<li><a href="https://arioncoin.com/" target="_blank"><img width='20px' src='/images/arion.png'> 12/18/2019 : Arion : <strong>New Listing !!!!</strong></a></li>
-<li><a href="https://innovacoin.io/" target="_blank"><img width='20px' src='/images/innova.png'> 12/18/2019 : Innova : <strong>New Listing !!!!</strong></a></li>
-<li><a href="https://privcy.eu/" target="_blank"><img width='20px' src='/images/privcy.png'> 12/18/2019 : Privcy : <strong>New Listing !!!!</strong></a></li>
+<li><a href="https://arioncoin.com/" title="arioncoin.com" target="_blank" rel="nofollow"><img width="20px" src="/images/arion.png" alt="arion"> 12/18/2019 : Arion : <strong>New Listing !!!!</strong></a></li>
+<li><a href="https://innovacoin.io/" title="innovacoin.io" target="_blank" rel="nofollow"><img width="20px" src="/images/innova.png" alt="innova"> 12/18/2019 : Innova : <strong>New Listing !!!!</strong></a></li>
+<li><a href="https://privcy.eu/" title="privcy.eu" target="_blank" rel="nofollow"><img width="20px" src="/images/privcy.png" alt="privcy"> 12/18/2019 : Privcy : <strong>New Listing !!!!</strong></a></li>
 
 <li><strong>Coin News</strong></li>
 
@@ -227,6 +220,9 @@ DONATION SECTION
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
+
+<!-- Footer -->
+<div class="footer"><p>&copy; 2019 Coin Pool Services - All Rights Reserved</p></div>
 
 <script>
 function page_refresh()

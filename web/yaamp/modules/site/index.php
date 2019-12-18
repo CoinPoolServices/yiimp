@@ -25,202 +25,164 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 
 ?>
 
-<div id='resume_update_button' style='color: #444; background-color: #ffd; border: 1px solid #eea;
-	padding: 10px; margin-left: 20px; margin-right: 20px; margin-top: 15px; cursor: pointer; display: none;'
-	onclick='auto_page_resume();' align=center>
-	<strong>Auto refresh is paused - Click to resume lazy person!</strong></div>
-
-
-<!--
-SCROLLING PRICE BAR 
--->
-
-<div class='header'><div style='width: 100%; height:40px;'><iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'></iframe></div>
-
-<table cellspacing=20 width=100%>
-<tr><td valign=top width=50%>
-
-<!--
-GENERAL INFO SECTION 
--->
-<div class="main-left-box">
-	<div class="main-left-title">Coin Pool Services</div>
-		<div class="main-left-inner">
-			<p style="text-align: justify;">Coin Pool Services is a pool management solution based on the Yii Framework.</p>
-			<p style="text-align: justify;">This fork was based on the yaamp source code and is now managed by Coin Pool Service Dev Team.</p>
-			<p style="text-align: justify;">No registration is required, we do payouts in the currency you mine. Use your wallet address as the username.</p>
-			<p style="text-align: justify;">Payouts are made automatically every 2 hours for all balances above <strong>0.001</strong>, or <strong>0.0001</strong> on Sunday.</p>
-			<p style="text-align: justify;">For some coins, there is an initial delay before the first payout, please wait at least 6 hours before asking for support.</p>
-			<p style="text-align: justify;">Blocks are distributed proportionally among valid submitted shares.</p>
-		</div>
+<div id='resume_update_button' style='color: #444; background-color: #ffd; border: 1px solid #eea; padding: 10px; margin-left: 20px; margin-right: 20px; margin-top: 15px; cursor: pointer; display: none;' onclick='auto_page_resume();' align=center>
+	<strong>Auto refresh is paused - Click to resume lazy person!</strong>
+</div>
+<!-- SCROLLING PRICE BAR -->
+<div class='header'>
+	<div style='width: 100%; height:40px;'>
+		<iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'></iframe>
 	</div>
 </div>
 
-<br/>
+<table cellspacing=20 width=100%>
+	<tr>
+		<td valign=top width=50%>
+		<!-- GENERAL INFO SECTION -->
+		<div class="main-left-box" style="margin-bottom: 10px;">
+			<div class="main-left-title">Coin Pool Services</div>
+				<div class="main-left-inner">
+				<p style="text-align: justify;">Coin Pool Services is a pool management solution based on the Yii Framework.</p>
+				<p style="text-align: justify;">This fork was based on the yaamp source code and is now managed by Coin Pool Service Dev Team.</p>
+				<p style="text-align: justify;">No registration is required, we do payouts in the currency you mine. Use your wallet address as the username.</p>
+				<p style="text-align: justify;">Payouts are made automatically every 2 hours for all balances above <strong>0.001</strong>, or <strong>0.0001</strong> on Sunday.</p>
+				<p style="text-align: justify;">For some coins, there is an initial delay before the first payout, please wait at least 6 hours before asking for support.</p>
+				<p style="text-align: justify;">Blocks are distributed proportionally among valid submitted shares.</p>
+				</div>
+		</div>
+		<!-- STRATUM SETUP SECTION -->
+		<div class="main-left-box">
+			<div class="main-left-title">Configuration Maker</div>
+				<div class="main-left-inner">
+				<table>
+					<thead>
+					<tr>
+						<th>Coin</th>
+						<th>Wallet Address</th>
+						<th>RigName</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>
+						<select id="drop-coin">
+							<option data-port='8533' data-algo='-a tribus' data-symbol='INN'>Innova (INN)</option>
+							<option data-port='3633' data-algo='-a x13' data-symbol='PRIV'>PRiVCY (PRIV)</option>
+							<option data-port='3533' data-algo='-a x11' data-symbol='Arion'>Arion (Arion)</option>
+						</select>
+						</td>
+						<td><input id="text-wallet" type="text" size="44" placeholder="1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7 "></td>
+						<td><input id="text-rig-name" type="text" size="10" placeholder="GPURig1"></td>
+						<td><input id="Generate!" type="button" value="Start Mining" onclick="generate()"></td>
+					</tr>
+					<tr>
+						<td colspan="5"><p class="main-left-box" style="padding: 3px; background-color: #ffffee; font-family: monospace;" id="output">-a tribus -o stratum+tcp://coinpoolservices.com:8533 -u . -p c=INN</p></td>
+					</tr>
+					</tbody>
+				</table>
 
-<!--
-STRATUM SETUP SECTION 
--->
+			<p><strong>DO NOT USE a BTC address here for the time being. This feature is being worked on in the background for select coins.</strong>!<br>
+			See the "Pool Status" area on the right for PORT numbers. Algorithms without associated coins are disabled.</p>
 
-<div class="main-left-box">
-<div class="main-left-title">Configuration Maker</div>
-<div class="main-left-inner">
+			<script>
+			function getLastUpdated(){
+				var dropCoin = document.getElementById('drop-coin');
+				var rigName = document.getElementById('text-rig-name').value;
+				var result = '';
 
+				result += dropCoin.options[dropCoin.selectedIndex].dataset.algo + ' -o stratum+tcp://' + 'coinpoolservices.com:';
+				result += dropCoin.options[dropCoin.selectedIndex].dataset.port + ' -u ';
+				result += document.getElementById('text-wallet').value;
+				if (rigName) result += '.' + rigName;
+				result += ' -p c=';
+				result += dropCoin.options[dropCoin.selectedIndex].dataset.symbol;
+				return result;
+			}
+			function generate(){
+			  	var result = getLastUpdated()
+					document.getElementById('output').innerHTML = result;
+			}
+			generate();
+			</script>
+			</div>
+		</div>
 
-<table>
-<thead>
-<tr>
-<th>Coin</th>
-<th>Wallet Address</th>
-<th>RigName</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>
-<select id="drop-coin">
-<option data-port='8533' data-algo='-a tribus' data-symbol='INN'>Innova (INN)</option>
-<option data-port='3633' data-algo='-a x13' data-symbol='PRIV'>PRiVCY (PRIV)</option>
-<option data-port='3533' data-algo='-a x11' data-symbol='Arion'>Arion (Arion)</option>
-</select>
-</td>
-<td>
-<input id="text-wallet" type="text" size="44" placeholder="1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7 ">
-</td><td>
-<input id="text-rig-name" type="text" size="10" placeholder="GPURig1">
-</td>
-<td>
-<input id="Generate!" type="button" value="Start Mining" onclick="generate()">
-</td>
-</tr>
-<tr><td colspan="5"><p class="main-left-box" style="padding: 3px; background-color: #ffffee; font-family: monospace;" id="output">-a tribus -o stratum+tcp://coinpoolservices.com:8533 -u . -p c=INN</p>
-</td>
-</tr>
-</tbody></table>
+		<div class="main-left-box">
+			<div class="main-left-title">New Features</div>
+				<div class="main-left-inner">
+				<h4>Current Listings</h4>
+				<ul>		
+					<li><a href="https://arioncoin.com/" title="arioncoin.com" target="_blank" rel="nofollow"><img width="20px" src="/images/arion.png" alt="arion"> 12/18/2019 : Arion : <strong>New Listing !!!!</strong></a></li>
+					<li><a href="https://innovacoin.io/" title="innovacoin.io" target="_blank" rel="nofollow"><img width="20px" src="/images/innova.png" alt="innova"> 12/18/2019 : Innova : <strong>New Listing !!!!</strong></a></li>
+					<li><a href="https://privcy.eu/" title="privcy.eu" target="_blank" rel="nofollow"><img width="20px" src="/images/privcy.png" alt="privcy"> 12/18/2019 : Privcy : <strong>New Listing !!!!</strong></a></li>
+				</ul>
+				<h4>Coin News</h4>
+				<ul>
+					<li>Blocks left for Innovas <strong>POW</strong> - <strong>
+					<?php
 
-<li><strong>DO NOT USE a BTC address here for the time being. This feature is being worked on in the background for select coins.</strong>!</li>
-<li>See the "Pool Status" area on the right for PORT numbers. Algorithms without associated coins are disabled.</li>
+					$actualBlock = cuGet('https://explorer.innovacoin.io/api/getblockcount');
+					echo number_format( ( 50000 - $actualBlock), 0, '.', ' ');	
 
-<br>
+					?></strong></li>
+				</ul>
+			</div>
+		</div>
+		<!-- URL LINK SECTION -->
+		<div class="main-left-box">
+			<div class="main-left-title">LINKS</div>
+				<div class="main-left-inner">
+				<ul>
+					<!--<li><strong>BitcoinTalk</strong> - <a href='https://bitcointalk.org/index.php?topic=508786.0' target=_blank >https://bitcointalk.org/index.php?topic=508786.0</a></li>-->
+					<!--<li><strong>IRC</strong> - <a href='http://webchat.freenode.net/?channels=#yiimp' target=_blank >http://webchat.freenode.net/?channels=#yiimp</a></li>-->
+					<li><strong>API</strong> - <a href='/site/api'>http://coinpoolservices.com/site/api</a></li>
+					<li><strong>Difficulty</strong> - <a href='/site/diff'>http://coinpoolservices.com/site/diff</a></li>
 
-<script>
-function getLastUpdated(){
-	var dropCoin = document.getElementById('drop-coin');
-	var rigName = document.getElementById('text-rig-name').value;
-	var result = '';
+					<?php if (YIIMP_PUBLIC_BENCHMARK): ?>
+					<li><strong>Benchmarks</strong> - <a href='/site/benchmarks'>http://coinpoolservices.com/site/benchmarks</a></li>
+					<?php endif; ?>
 
-	result += dropCoin.options[dropCoin.selectedIndex].dataset.algo + ' -o stratum+tcp://' + 'coinpoolservices.com:';
-	result += dropCoin.options[dropCoin.selectedIndex].dataset.port + ' -u ';
-	result += document.getElementById('text-wallet').value;
-	if (rigName) result += '.' + rigName;
-	result += ' -p c=';
-	result += dropCoin.options[dropCoin.selectedIndex].dataset.symbol;
-	return result;
-}
-function generate(){
-  	var result = getLastUpdated()
-		document.getElementById('output').innerHTML = result;
-}
-generate();
-</script>
+					<?php if (YAAMP_ALLOW_EXCHANGE): ?>
+					<li><strong>Algo Switching</strong> - <a href='/site/multialgo'>http://coinpoolservices.com/site/multialgo</a></li>
+					<?php endif; ?>
 
-</ul>
-</div></div><br>
+					<li><a href="https://discord.gg/G7Snbxk" target="_blank"><img width='300' src='/images/discord.png'></a></li>
+				</ul>
+				</div>			
+		</div>
+		<!--  
+		<a class="twitter-timeline" href="https://twitter.com/hashtag/crypto" data-widget-id="617405893039292417" data-chrome="transparent" height="450px" data-tweet-limit="3" data-aria-polite="polite">Tweets about #crypto</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		-->
+		</td>
+		<td valign=top>
+		<!--  -->
+		<div id='pool_current_results'>
+		<br><br><br><br><br><br><br><br><br><br>
+		</div>
 
-<div class="main-left-box">
-<div class="main-left-title">New Features</div>
-<div class="main-left-inner">
+		<div id='pool_history_results'>
+		<br><br><br><br><br><br><br><br><br><br>
+		</div>
+		<!-- DONATION SECTION -->
+		<div class="main-left-box">
+			<div class="main-left-title">DONATIONS</div>
+				<div class="main-left-inner">
+				<left>
+					<img width='150' src='/images/btc_wallet.png'>
+					<p>BTC: <a href="https://www.blockchain.com/btc/address/1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7">1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7</a>&nbsp;</p>
 
-<li><strong>Current Listings<strong></li>
-<li><a href="https://arioncoin.com/" title="arioncoin.com" target="_blank" rel="nofollow"><img width="20px" src="/images/arion.png" alt="arion"> 12/18/2019 : Arion : <strong>New Listing !!!!</strong></a></li>
-<li><a href="https://innovacoin.io/" title="innovacoin.io" target="_blank" rel="nofollow"><img width="20px" src="/images/innova.png" alt="innova"> 12/18/2019 : Innova : <strong>New Listing !!!!</strong></a></li>
-<li><a href="https://privcy.eu/" title="privcy.eu" target="_blank" rel="nofollow"><img width="20px" src="/images/privcy.png" alt="privcy"> 12/18/2019 : Privcy : <strong>New Listing !!!!</strong></a></li>
+					<img width='150' src='/images/ltc_wallet.png'>
+					<p>LTC: <a href="https://live.blockcypher.com/ltc/address/M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk/">M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk</a>&nbsp;</p>
 
-<li><strong>Coin News</strong></li>
-
-
-
-<li>Blocks left for Innovas <strong>POW</strong> - <strong>
-<?php
-
-$actualBlock = cuGet('https://explorer.innovacoin.io/api/getblockcount');
-echo number_format( ( 50000 - $actualBlock), 0, '.', ' ');	
-
-?></strong>
-</ul>
-</div></div><br>
-
-<!--
-URL LINK SECTION 
--->
-
-<div class="main-left-box">
-<div class="main-left-title">LINKS</div>
-<div class="main-left-inner">
-
-<ul>
-
-<!--<li><strong>BitcoinTalk</strong> - <a href='https://bitcointalk.org/index.php?topic=508786.0' target=_blank >https://bitcointalk.org/index.php?topic=508786.0</a></li>-->
-<!--<li><strong>IRC</strong> - <a href='http://webchat.freenode.net/?channels=#yiimp' target=_blank >http://webchat.freenode.net/?channels=#yiimp</a></li>-->
-
-<li><strong>API</strong> - <a href='/site/api'>http://coinpoolservices.com/site/api</a></li>
-<li><strong>Difficulty</strong> - <a href='/site/diff'>http://coinpoolservices.com/site/diff</a></li>
-
-<?php if (YIIMP_PUBLIC_BENCHMARK): ?>
-<li><strong>Benchmarks</strong> - <a href='/site/benchmarks'>http://coinpoolservices.com/site/benchmarks</a></li>
-<?php endif; ?>
-
-<?php if (YAAMP_ALLOW_EXCHANGE): ?>
-<li><strong>Algo Switching</strong> - <a href='/site/multialgo'>http://coinpoolservices.com/site/multialgo</a></li>
-<?php endif; ?>
-
-<li><a href="https://discord.gg/G7Snbxk" target="_blank"><img width='300' src='/images/discord.png'></a></li>
-<br>
-
-</ul>
-</div></div><br>
-
-<!--  
-<a class="twitter-timeline" href="https://twitter.com/hashtag/crypto" data-widget-id="617405893039292417" data-chrome="transparent" height="450px" data-tweet-limit="3" data-aria-polite="polite">Tweets about #crypto</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
--->
-</td><td valign=top>
-
-<!--  -->
-
-<div id='pool_current_results'>
-<br><br><br><br><br><br><br><br><br><br>
-</div>
-
-<div id='pool_history_results'>
-<br><br><br><br><br><br><br><br><br><br>
-</div>
-
-
-<!--
-DONATION SECTION 
--->
-<div class="main-left-box">
-<div class="main-left-title">DONATIONS</div>
-<div class="main-left-inner">
-<left>
-<img width='150' src='/images/btc_wallet.png'>
-<li> BTC 	: <a href="https://www.blockchain.com/btc/address/1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7">1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7</a>&nbsp;</li><p>   </p>
-
-<img width='150' src='/images/ltc_wallet.png'>
-<li> LTC	: <a href="https://live.blockcypher.com/ltc/address/M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk/">M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk</a>&nbsp;</li><p>   </p>
-
-<img width='150' src='/images/inn_wallet.png'>
-<li> INN	: <a href="https://explorer.innovacoin.io/address/iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw">iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw</a>&nbsp;</li><p>   </p>
-</left>
-</div>
-
-</td></tr></table>
-
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-
+					<img width='150' src='/images/inn_wallet.png'>
+					<p>INN: <a href="https://explorer.innovacoin.io/address/iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw">iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw</a>&nbsp;</p>
+				</left>
+				</div>
+		</div>
+		</td>
+	</tr>
+</table>
 <!-- Footer -->
 <div class="footer"><p>&copy; 2019 Coin Pool Services - All Rights Reserved</p></div>
 

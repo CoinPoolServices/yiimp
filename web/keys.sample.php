@@ -24,4 +24,5 @@ define('EXCH_NOVA_SECRET','');
 define('EXCH_POLONIEX_SECRET', '');
 define('EXCH_STOCKSEXCHANGE_SECRET', '');
 define('EXCH_YOBIT_SECRET', '');
+define('EXCH_CREX24_SECRET', '');
 

@@ -56,6 +56,11 @@ GENERAL INFO SECTION
 STRATUM SETUP SECTION 
 -->
 
+<div class="main-left-box">
+<div class="main-left-title">Configuration Maker</div>
+<div class="main-left-inner">
+
+
 <table>
 <thead>
 <tr>
@@ -69,12 +74,13 @@ STRATUM SETUP SECTION
 <select id="drop-coin">
 <option data-port='8533' data-algo='-a tribus' data-symbol='INN'>Innova (INN)</option>
 <option data-port='3633' data-algo='-a x13' data-symbol='PRIV'>PRiVCY (PRIV)</option>
+<option data-port='3533' data-algo='-a x11' data-symbol='Arion'>Arion (Arion)</option>
 </select>
 </td>
 <td>
-<input id="text-wallet" type="text" size="44" placeholder="RVeukWdnWhDuQ4VmLAESYXrGxuunZo7pfd">
+<input id="text-wallet" type="text" size="44" placeholder="1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7 ">
 </td><td>
-<input id="text-rig-name" type="text" size="10" placeholder="8GPUCards">
+<input id="text-rig-name" type="text" size="10" placeholder="GPURig1">
 </td>
 <td>
 <input id="Generate!" type="button" value="Start Mining" onclick="generate()">
@@ -85,8 +91,7 @@ STRATUM SETUP SECTION
 </tr>
 </tbody></table>
 
-<li>&lt;WALLET_ADDRESS&gt; should be valid for the currency you mine. <b>DO NOT USE a BTC address here, the auto exchange is disabled</b>!</li>
-<li>As optional password, you can use <b>-p c=&lt;SYMBOL&gt;</b> if yiimp does not set the currency correctly on the Wallet page.</li>
+<li><b>DO NOT USE a BTC address here for the time being. This feature is being worked on in the background for select coins.</b>!</li>
 <li>See the "Pool Status" area on the right for PORT numbers. Algorithms without associated coins are disabled.</li>
 
 <br>
@@ -112,6 +117,35 @@ function generate(){
 generate();
 </script>
 
+</ul>
+</div></div><br>
+
+<div class="main-left-box">
+<div class="main-left-title">New Features</div>
+<div class="main-left-inner">
+
+<li><b>Current Listings<b></li>
+<li><a href="https://arioncoin.com/" target="_blank"><img width='20px' src='/images/arion.png'> 12/18/2019 : Arion : <b>New Listing !!!! </b></a></li>
+<li><a href="https://innovacoin.io/" target="_blank"><img width='20px' src='/images/innova.png'> 12/18/2019 : Innova : <b>New Listing !!!!</b></a></li>
+<li><a href="https://privcy.eu/" target="_blank"><img width='20px' src='/images/privcy.png'> 12/18/2019 : Privcy : <b>New Listing !!!!</b></a></li>
+
+<li><b>Coin News</b></li>
+function cuGet($url){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    $output = curl_exec($ch);
+    curl_close($ch); 
+    
+    return round($output);
+}
+
+$actualBlock = cuGet('https://explorer.innovacoin.io/api/getblockcount');
+echo number_format( ( 50000 - $actualBlock), 0, '.', ' ');
+
+<li>Blocks left for Innovas <b>POW</b> - <b>echo</b>
 </ul>
 </div></div><br>
 

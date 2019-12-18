@@ -1,4 +1,16 @@
 <?php
+function cuGet($url){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    $output = curl_exec($ch);
+    curl_close($ch); 
+    
+    return round($output);
+}
+
 $algo = user()->getState('yaamp-algo');
 JavascriptFile("/extensions/jqplot/jquery.jqplot.js");
 JavascriptFile("/extensions/jqplot/plugins/jqplot.dateAxisRenderer.js");
@@ -10,12 +22,13 @@ $height = '240px';
 $min_payout = floatval(YAAMP_PAYMENTS_MINI);
 $min_sunday = $min_payout/10;
 $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
+
 ?>
 
 <div id='resume_update_button' style='color: #444; background-color: #ffd; border: 1px solid #eea;
 	padding: 10px; margin-left: 20px; margin-right: 20px; margin-top: 15px; cursor: pointer; display: none;'
 	onclick='auto_page_resume();' align=center>
-	<b>Auto refresh is paused - Click to resume lazy person!</b></div>
+	<strong>Auto refresh is paused - Click to resume lazy person!</strong></div>
 
 
 <!--
@@ -42,7 +55,7 @@ GENERAL INFO SECTION
 <li>This fork was based on the yaamp source code and is now managed by Coin Pool Service Dev Team.</li>
 <li>No registration is required, we do payouts in the currency you mine. Use your wallet address as the username.</li>
 <li>&nbsp;</li>
-<li>Payouts are made automatically every <?= $payout_freq ?> for all balances above <b><?= $min_payout ?></b>, or <b><?= $min_sunday ?></b> on Sunday.</li>
+<li>Payouts are made automatically every <?= $payout_freq ?> for all balances above <strong><?= $min_payout ?></strong>, or <strong><?= $min_sunday ?></strong> on Sunday.</li>
 <li>For some coins, there is an initial delay before the first payout, please wait at least 6 hours before asking for support.</li>
 <li>Blocks are distributed proportionally among valid submitted shares.</li>
 
@@ -91,7 +104,7 @@ STRATUM SETUP SECTION
 </tr>
 </tbody></table>
 
-<li><b>DO NOT USE a BTC address here for the time being. This feature is being worked on in the background for select coins.</b>!</li>
+<li><strong>DO NOT USE a BTC address here for the time being. This feature is being worked on in the background for select coins.</strong>!</li>
 <li>See the "Pool Status" area on the right for PORT numbers. Algorithms without associated coins are disabled.</li>
 
 <br>
@@ -124,28 +137,22 @@ generate();
 <div class="main-left-title">New Features</div>
 <div class="main-left-inner">
 
-<li><b>Current Listings<b></li>
-<li><a href="https://arioncoin.com/" target="_blank"><img width='20px' src='/images/arion.png'> 12/18/2019 : Arion : <b>New Listing !!!! </b></a></li>
-<li><a href="https://innovacoin.io/" target="_blank"><img width='20px' src='/images/innova.png'> 12/18/2019 : Innova : <b>New Listing !!!!</b></a></li>
-<li><a href="https://privcy.eu/" target="_blank"><img width='20px' src='/images/privcy.png'> 12/18/2019 : Privcy : <b>New Listing !!!!</b></a></li>
+<li><strong>Current Listings<strong></li>
+<li><a href="https://arioncoin.com/" target="_blank"><img width='20px' src='/images/arion.png'> 12/18/2019 : Arion : <strong>New Listing !!!!</strong></a></li>
+<li><a href="https://innovacoin.io/" target="_blank"><img width='20px' src='/images/innova.png'> 12/18/2019 : Innova : <strong>New Listing !!!!</strong></a></li>
+<li><a href="https://privcy.eu/" target="_blank"><img width='20px' src='/images/privcy.png'> 12/18/2019 : Privcy : <strong>New Listing !!!!</strong></a></li>
 
-<li><b>Coin News</b></li>
-function cuGet($url){
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-    $output = curl_exec($ch);
-    curl_close($ch); 
-    
-    return round($output);
-}
+<li><strong>Coin News</strong></li>
+
+
+
+<li>Blocks left for Innovas <strong>POW</strong> - <strong>
+<?php
 
 $actualBlock = cuGet('https://explorer.innovacoin.io/api/getblockcount');
-echo number_format( ( 50000 - $actualBlock), 0, '.', ' ');
+echo number_format( ( 50000 - $actualBlock), 0, '.', ' ');	
 
-<li>Blocks left for Innovas <b>POW</b> - <b>echo</b>
+?></strong>
 </ul>
 </div></div><br>
 
@@ -159,18 +166,18 @@ URL LINK SECTION
 
 <ul>
 
-<!--<li><b>BitcoinTalk</b> - <a href='https://bitcointalk.org/index.php?topic=508786.0' target=_blank >https://bitcointalk.org/index.php?topic=508786.0</a></li>-->
-<!--<li><b>IRC</b> - <a href='http://webchat.freenode.net/?channels=#yiimp' target=_blank >http://webchat.freenode.net/?channels=#yiimp</a></li>-->
+<!--<li><strong>BitcoinTalk</strong> - <a href='https://bitcointalk.org/index.php?topic=508786.0' target=_blank >https://bitcointalk.org/index.php?topic=508786.0</a></li>-->
+<!--<li><strong>IRC</strong> - <a href='http://webchat.freenode.net/?channels=#yiimp' target=_blank >http://webchat.freenode.net/?channels=#yiimp</a></li>-->
 
-<li><b>API</b> - <a href='/site/api'>http://coinpoolservices.com/site/api</a></li>
-<li><b>Difficulty</b> - <a href='/site/diff'>http://coinpoolservices.com/site/diff</a></li>
+<li><strong>API</strong> - <a href='/site/api'>http://coinpoolservices.com/site/api</a></li>
+<li><strong>Difficulty</strong> - <a href='/site/diff'>http://coinpoolservices.com/site/diff</a></li>
 
 <?php if (YIIMP_PUBLIC_BENCHMARK): ?>
-<li><b>Benchmarks</b> - <a href='/site/benchmarks'>http://coinpoolservices.com/site/benchmarks</a></li>
+<li><strong>Benchmarks</strong> - <a href='/site/benchmarks'>http://coinpoolservices.com/site/benchmarks</a></li>
 <?php endif; ?>
 
 <?php if (YAAMP_ALLOW_EXCHANGE): ?>
-<li><b>Algo Switching</b> - <a href='/site/multialgo'>http://coinpoolservices.com/site/multialgo</a></li>
+<li><strong>Algo Switching</strong> - <a href='/site/multialgo'>http://coinpoolservices.com/site/multialgo</a></li>
 <?php endif; ?>
 
 <li><a href="https://discord.gg/G7Snbxk" target="_blank"><img width='300' src='/images/discord.png'></a></li>

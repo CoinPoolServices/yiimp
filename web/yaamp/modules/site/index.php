@@ -112,9 +112,9 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 				<div class="main-left-inner">
 				<h4>Current Listings</h4>
 				<ul>		
-					<li><a href="https://arioncoin.com/" title="arioncoin.com" target="_blank" rel="nofollow"><img width="20px" src="/images/arion.png" alt="arion"> 12/18/2019 : Arion : <strong>New Listing !!!!</strong></a></li>
-					<li><a href="https://innovacoin.io/" title="innovacoin.io" target="_blank" rel="nofollow"><img width="20px" src="/images/innova.png" alt="innova"> 12/18/2019 : Innova : <strong>New Listing !!!!</strong></a></li>
-					<li><a href="https://privcy.eu/" title="privcy.eu" target="_blank" rel="nofollow"><img width="20px" src="/images/privcy.png" alt="privcy"> 12/18/2019 : Privcy : <strong>New Listing !!!!</strong></a></li>
+					<li><a href="https://arioncoin.com/" title="arioncoin.com" target="_blank" rel="nofollow"><img width="60px" src="/images/arion.png" alt="arion"> 12/18/2019 : Arion : <strong>New Listing !!!!</strong></a></li>
+					<li><a href="https://innovacoin.io/" title="innovacoin.io" target="_blank" rel="nofollow"><img width="60px" src="/images/innova.png" alt="innova"> 12/18/2019 : Innova : <strong>New Listing !!!!</strong></a></li>
+					<li><a href="https://privcy.eu/" title="privcy.eu" target="_blank" rel="nofollow"><img width="60px" src="/images/privcy.png" alt="privcy"> 12/18/2019 : Privcy : <strong>New Listing !!!!</strong></a></li>
 				</ul>
 				<h4>Coin News</h4>
 				<ul>

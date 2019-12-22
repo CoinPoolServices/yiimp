@@ -1,6 +1,8 @@
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?&color=success)](https://github.com/CoinPoolServices/yiimp/blob/master/LICENSE)
+![GitHub last commit](https://img.shields.io/github/last-commit/CoinPoolServices/yiimp)
+![Discord](https://img.shields.io/discord/649358050918137876)
 [![Build Status](https://travis-ci.org/CoinPoolServices/yiimp.svg?branch=landingpage)](https://travis-ci.org/CoinPoolServices/yiimp)
 
-#yiimp - yaamp fork
 
 WARNINGS
 - Use at your own risks.
@@ -128,10 +130,3 @@ There a lot of unused code in the php branch. Lot come from other projects I wor
 Credits:
 
 Thanks to globalzon to have released the initial Yaamp source code.
-
---
-
-You can support this project donating to tpruvot :
-
-BTC : 1Auhps1mHZQpoX4mCcVL8odU81VakZQ6dR
-

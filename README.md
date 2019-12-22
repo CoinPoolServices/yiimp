@@ -1,6 +1,7 @@
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?&color=success)](https://github.com/CoinPoolServices/yiimp/blob/master/LICENSE)
 ![GitHub last commit](https://img.shields.io/github/last-commit/CoinPoolServices/yiimp)
 ![Discord](https://img.shields.io/discord/649358050918137876)
+![Website](https://img.shields.io/website?down_color=red&down_message=Mining%20is%20Currently%20Offline&up_message=Mining%20is%20Online&url=https%3A%2F%2Fcoinpoolservices.com)
 [![Build Status](https://travis-ci.org/CoinPoolServices/yiimp.svg?branch=landingpage)](https://travis-ci.org/CoinPoolServices/yiimp)
 
 

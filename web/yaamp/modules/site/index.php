@@ -66,7 +66,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 					<tr>
 						<td>
 						<select id="drop-coin">
-							<option data-port='8533' data-algo='-a tribus' data-symbol='INN'>Innova (INN)</option>
+							<option data-port='8533' data-algo='-a tribus' data-symbol='SCRIV'>ScrivNetwork (SCRIV)</option>
 							<option data-port='3633' data-algo='-a x13' data-symbol='PRIV'>PRiVCY (PRIV)</option>
 							<option data-port='3533' data-algo='-a x11' data-symbol='Arion'>Arion (Arion)</option>
 						</select>
@@ -76,7 +76,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 						<td><input id="Generate!" type="button" value="Start Mining" onclick="generate()"></td>
 					</tr>
 					<tr>
-						<td colspan="5"><p class="main-left-box" style="padding: 3px; background-color: #ffffee; font-family: monospace;" id="output">-a tribus -o stratum+tcp://coinpoolservices.com:8533 -u . -p c=INN</p></td>
+						<td colspan="5"><p class="main-left-box" style="padding: 3px; background-color: #ffffee; font-family: monospace;" id="output">-a x13 -o stratum+tcp://coinpoolservices.com:3633 -u . -p c=PRIV</p></td>
 					</tr>
 					</tbody>
 				</table>
@@ -112,19 +112,22 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 				<div class="main-left-inner">
 				<h4>Current Listings</h4>
 				<ul>		
-					<li><a href="https://arioncoin.com/" title="arioncoin.com" target="_blank" rel="nofollow"><img width="60px" src="/images/arion.png" alt="arion"> 12/18/2019 : Arion : <strong>New Listing !!!!</strong></a></li>
-					<li><a href="https://innovacoin.io/" title="innovacoin.io" target="_blank" rel="nofollow"><img width="60px" src="/images/innova.png" alt="innova"> 12/18/2019 : Innova : <strong>New Listing !!!!</strong></a></li>
-					<li><a href="https://privcy.eu/" title="privcy.eu" target="_blank" rel="nofollow"><img width="60px" src="/images/privcy.png" alt="privcy"> 12/18/2019 : Privcy : <strong>New Listing !!!!</strong></a></li>
+					<li><img width="60px" src="/images/arion.png" alt="arion"><strong>Arion</strong></a></li>
+					<li><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/arioncoin/arioncoin?label=Arion%20Current%20Release&style=for-the-badge"></li>
+					<li><img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/arioncoin/arioncoin?label=Arion%20Release%20Date&style=for-the-badge"></li>
+
+					<li><img width="60px" src="/images/privcy.png" alt="privcy"><strong>Privcy</strong></a></li>
+					<li><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/privcycoin/privcy?label=Arion%20Current%20Release&style=for-the-badge"></li>
+					<li><img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/privcycoin/privcy?label=Privcy%20Current%20Release&style=for-the-badge"></li>
+
+					<li><img width="60px" src="/images/scriv.png" alt="scriv"><strong>ScrivNetwork</strong></a></li>
+					<li><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/ScrivNetwork/scriv?label=Scriv%20Current%20Release&style=for-the-badge"></li>
+					<li><img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/ScrivNetwork/scriv?label=Scriv%20Release%20Date&style=for-the-badge"></li>
+
 				</ul>
 				<h4>Coin News</h4>
 				<ul>
-					<li>Blocks left for Innovas <strong>POW</strong> - <strong>
-					<?php
-
-					$actualBlock = cuGet('https://explorer.innovacoin.io/api/getblockcount');
-					echo number_format( ( 50000 - $actualBlock), 0, '.', ' ');	
-
-					?></strong></li>
+					<li><img width="60px" src="/images/innova.png" alt="innova">Innova has reached the last pow block and will no longer be minable. </li>
 				</ul>
 			</div>
 		</div>
@@ -174,9 +177,6 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 
 					<img width='150' src='/images/ltc_wallet.png'>
 					<p>LTC: <a href="https://live.blockcypher.com/ltc/address/M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk/">M8FwP7eRySXMW8X6zcLCZwFgXWeVrQyAAk</a>&nbsp;</p>
-
-					<img width='150' src='/images/inn_wallet.png'>
-					<p>INN: <a href="https://explorer.innovacoin.io/address/iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw">iSNDXHFsyAgWvrVnae5zoCWdpdHvAPnTnw</a>&nbsp;</p>
 				</left>
 				</div>
 		</div>

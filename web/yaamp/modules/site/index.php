@@ -29,7 +29,11 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <div id='resume_update_button' style='color: #444; background-color: #ffd; border: 1px solid #eea; padding: 10px; margin-left: 20px; margin-right: 20px; margin-top: 15px; cursor: pointer; display: none;' onclick='auto_page_resume();' align=center>
 	<strong>Auto refresh is paused - Click to resume lazy person!</strong>
 </div>
-<!-- SCROLLING PRICE BAR -->
+
+
+
+
+<!------------------------------------------------------------------------Scrolling Bar------------------------------------------------------------------------------------------------------------->
 <div class='header'>
 	<div style='width: 100%; height:40px;'>
 		<iframe src='https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&invert_hover=no' width='100%' height='36' scrolling='auto' marginwidth='0' marginheight='0' frameborder='0' border='0' style='border:0;margin:0;padding:0;'></iframe>
@@ -38,8 +42,9 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 
 <table cellspacing=20 width=100%>
 	<tr>
+
+<!------------------------------------------------------------------------General Info------------------------------------------------------------------------------------------------------------->
 		<td valign=top width=50%>
-		<!-- GENERAL INFO SECTION -->
 		<div class="main-left-box" style="margin-bottom: 10px;">
 			<div class="main-left-title">Coin Pool Services</div>
 				<div class="main-left-inner">
@@ -51,7 +56,9 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 				<p style="text-align: justify;">Blocks are distributed proportionally among valid submitted shares.</p>
 				</div>
 		</div>
-		<!-- STRATUM SETUP SECTION -->
+		<br>
+
+<!------------------------------------------------------------------------Stratum Setup------------------------------------------------------------------------------------------------------------->
 		<div class="main-left-box">
 			<div class="main-left-title">Configuration Maker</div>
 				<div class="main-left-inner">
@@ -109,8 +116,10 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 			</script>
 			</div>
 		</div>
+		<br>
 
 
+<!------------------------------------------------------------------------Miner Links------------------------------------------------------------------------------------------------------------->
 			<div class="main-left-box">
 				<div class="main-left-title">Miner Download Links</div>
 					<div class="main-left-inner">
@@ -132,7 +141,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 
 
 
-
+<!------------------------------------------------------------------------New Listings------------------------------------------------------------------------------------------------------------->
 		<div class="main-left-box">
 			<div class="main-left-title">New Listings</div>
 				<div class="main-left-inner">
@@ -156,7 +165,9 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 				</ul>
 			</div>
 		</div>
-		<!-- URL LINK SECTION -->
+		<br>
+
+<!----------------------------------------------------------------------URL Links--------------------------------------------------------------------------------------------------------------->
 		<div class="main-left-box">
 			<div class="main-left-title">LINKS</div>
 				<div class="main-left-inner">
@@ -178,10 +189,10 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 				</ul>
 				</div>			
 		</div>
+		<br>
 
 
-
-		<!-- DONATION SECTION -->
+<!------------------------------------------------------------------------Donation Section------------------------------------------------------------------------------------------------------------->
 		<div class="main-left-box">
 			<div class="main-left-title">DONATIONS</div>
 				<div class="main-left-inner">
@@ -195,11 +206,8 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 				</div>
 		</div>
 
+<!------------------------------------------------------------------------Not Sure------------------------------------------------------------------------------------------------------------->
 
-		<!--  
-		<a class="twitter-timeline" href="https://twitter.com/hashtag/crypto" data-widget-id="617405893039292417" data-chrome="transparent" height="450px" data-tweet-limit="3" data-aria-polite="polite">Tweets about #crypto</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		-->
 		</td>
 		<td valign=top>
 		<!--  -->
@@ -210,10 +218,11 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 		<div id='pool_history_results'>
 		<br><br><br><br><br><br><br><br><br><br>
 		</div>
+		<br>
 		
-		
-		
-		<div class="main-left-box"><div class="main-left-title">Coin Links</div><div class="main-left-inner"><style type="text/css">
+<!------------------------------------------------------------------------Coin Links------------------------------------------------------------------------------------------------------------->
+<div class="main-left-box"><div class="main-left-title">Coin Links</div>
+<div class="main-left-inner"><style type="text/css">
 td.symb, th.symb {
 	width:50px;
 	max-width: 50px;
@@ -257,7 +266,6 @@ td.symb {
 <td align="center"><a href="https://twitter.com/PRiVCY_COIN" target="_blank"><img src="images/twitter.png"></a></td>
 <td align="center"><a href="https://github.com/privcycoin/privcy/releases" target="_blank"><img src="images/wallet.png"></a></td>
 <td align="center"><a href="https://coinpoolservices.com/explorer/peers?id=1426" target="_blank"><img src="images/addnodes.png"></a></td>
-
 
 <!-- SCRIV NETWORK -->
 </thead><tbody><tr class="ssrow"><td width="18px"><img width="16px" src="/images/scriv.png">
@@ -328,11 +336,11 @@ td.symb {
 </tr></a></td></tr></tbody></table></div>
 
 <strong>Important: Always use wallets with caution. Never automatically trust them. Submit them to virustotal.com for checking prior to installing.</strong></div>
-
+<br>
 		
 
 
-		<!-- Form Section LINK SECTION -->
+<!------------------------------------------------------------------------Coin Listing Form------------------------------------------------------------------------------------------------------------->
 		<div class="main-left-box">
 			<div class="main-left-title">Coin Listing Form</div>
 				<div class="main-left-inner">
